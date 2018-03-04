@@ -1,5 +1,5 @@
-# NyanProgressBar
+# ParrotProgressBar
 
-A pretty nyan cat progress bar for IntelliJ IDEA and other JetBrains IDEs.
+Party parrot progress bar for IntelliJ IDEA.
 
-[Page on plugin repository site](https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar)
+forked by [NyanProgressBar](https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar)
