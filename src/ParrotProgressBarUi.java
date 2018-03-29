@@ -95,9 +95,9 @@ public class ParrotProgressBarUi extends BasicProgressBarUI {
         int x = -offset;
 
 
-//        LinearGradientPaint baseRainbowPaint = new LinearGradientPaint(0, JBUI.scale(2), 0, h - JBUI.scale(6),
-//                new float[]{ONE_OVER_SEVEN * 1, ONE_OVER_SEVEN * 2, ONE_OVER_SEVEN * 3, ONE_OVER_SEVEN * 4, ONE_OVER_SEVEN * 5, ONE_OVER_SEVEN * 6, ONE_OVER_SEVEN * 7},
-//                new Color[]{Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.cyan, Color.blue, VIOLET});
+////        LinearGradientPaint baseRainbowPaint = new LinearGradientPaint(0, JBUI.scale(2), 0, h - JBUI.scale(6),
+////                new float[]{ONE_OVER_SEVEN * 1, ONE_OVER_SEVEN * 2, ONE_OVER_SEVEN * 3, ONE_OVER_SEVEN * 4, ONE_OVER_SEVEN * 5, ONE_OVER_SEVEN * 6, ONE_OVER_SEVEN * 7},
+////                new Color[]{Color.RED, Color.ORANGE, Color.YELLOW, Color.GREEN, Color.cyan, Coor.blue, VIOLET});
 
         Paint old = g.getPaint();
         g.setPaint(baseRainbowPaint);
@@ -105,21 +105,21 @@ public class ParrotProgressBarUi extends BasicProgressBarUI {
         final float R = JBUI.scale(8f);
         final float R2 = JBUI.scale(9f);
         final Area containingRoundRect = new Area(new RoundRectangle2D.Float(1f, 1f, w - 2f, h - 2f, R, R));
-        while (x < Math.max(c.getWidth(), c.getHeight())) {
-            Path2D.Double path = new Path2D.Double();
-            float ww = getPeriodLength() / 2f;
-            path.moveTo(x, 0);
-            path.lineTo(x+ww, 0);
-            path.lineTo(x+ww - h / 2, h);
-            path.lineTo(x-h / 2, h);
-            path.lineTo(x, 0);
-            path.closePath();
-
-            final Area area = new Area(path);
-            area.intersect(containingRoundRect);
-            g.fill(area);
-            x+= getPeriodLength();
-        }
+//        while (x < Math.max(c.getWidth(), c.getHeight())) {
+//            Path2D.Double path = new Path2D.Double();
+//            float ww = getPeriodLength() / 2f;
+//            path.moveTo(x, 0);
+//            path.lineTo(x+ww, 0);
+//            path.lineTo(x+ww - h / 2, h);
+//            path.lineTo(x-h / 2, h);
+//            path.lineTo(x, 0);
+//            path.closePath();
+//
+//            final Area area = new Area(path);
+//            area.intersect(containingRoundRect);
+            g.fill(containingRoundRect);
+//            x+= getPeriodLength();
+//        }
         g.setPaint(old);
         offset = (offset + 1) % getPeriodLength();
         offset2 += velocity;
